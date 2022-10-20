@@ -5,20 +5,20 @@
 class Gpc < Formula
   desc "gpc is cli tool to create any page you want anywhere in confluence"
   homepage ""
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.3.0/gpc_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "76fa6fb38aaa80ccb389662968edee99af8fff497e01c1b9beb930de4625a7d6"
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.1/gpc_0.3.1_Darwin_arm64.tar.gz"
+      sha256 "9fb71f92f936c54697e9b9ff09f0c1deea79f55add982f38328ba4f53dc22867"
 
       def install
         bin.install "gpc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.3.0/gpc_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "c87aca06f08c4318958a227a6aa9e507855fd0cd99d40f69c03ff4f1afbb725a"
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.1/gpc_0.3.1_Darwin_x86_64.tar.gz"
+      sha256 "a7ecc4f2d30ca49eee69625b1348a0ebd55e55067cf29304fbf4f1d9ce99f03f"
 
       def install
         bin.install "gpc"
@@ -27,17 +27,17 @@ class Gpc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.3.0/gpc_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "751ec1cf16b994ef78809e306a37b9100ceb167dcca0974ef9f34cf5e7e5f7ab"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.1/gpc_0.3.1_Linux_arm64.tar.gz"
+      sha256 "25ba0a9aa916b9a71a4ac000573c2196c111dbb5c5248069ecef31301d6c4bf1"
 
       def install
         bin.install "gpc"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.3.0/gpc_0.3.0_Linux_arm64.tar.gz"
-      sha256 "5ae0fecd04301c39951c84d0dda0ae82badf4f76c1e632157510fd536d0828f9"
+    if Hardware::CPU.intel?
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.1/gpc_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "26c4dbd6b8c26803b859411e72f84db0f965d0f5ed1a2a7668017c4df1250eec"
 
       def install
         bin.install "gpc"
