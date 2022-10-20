@@ -5,20 +5,20 @@
 class Gpc < Formula
   desc "gpc is cli tool to create any page you want anywhere in confluence"
   homepage ""
-  version "0.2.1"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.2.1/gpc_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "f91489769ab7e2159da5e7dbd5891b71c98ecdb87c524e7821e38bdfa88e1083"
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.0/gpc_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "76fa6fb38aaa80ccb389662968edee99af8fff497e01c1b9beb930de4625a7d6"
 
       def install
         bin.install "gpc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.2.1/gpc_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "591a43ad19b83cde4d8ca1fcb1adba08eeb4f2a1a76948ee324afc743ff8196e"
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.0/gpc_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "c87aca06f08c4318958a227a6aa9e507855fd0cd99d40f69c03ff4f1afbb725a"
 
       def install
         bin.install "gpc"
@@ -28,16 +28,16 @@ class Gpc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.2.1/gpc_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "0ce7640a1b640354be6638b14be0f8e45cb4eafdee0a86274ce0e9cd6f1288cd"
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.0/gpc_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "751ec1cf16b994ef78809e306a37b9100ceb167dcca0974ef9f34cf5e7e5f7ab"
 
       def install
         bin.install "gpc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.2.1/gpc_0.2.1_Linux_arm64.tar.gz"
-      sha256 "27223f89d2ac2f475336e22ee50646d02ce2e272fb21119af27b42208097bfb7"
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.0/gpc_0.3.0_Linux_arm64.tar.gz"
+      sha256 "5ae0fecd04301c39951c84d0dda0ae82badf4f76c1e632157510fd536d0828f9"
 
       def install
         bin.install "gpc"
