@@ -5,20 +5,20 @@
 class Gpc < Formula
   desc "gpc is cli tool to create any page you want anywhere in confluence"
   homepage ""
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.3.1/gpc_0.3.1_Darwin_arm64.tar.gz"
-      sha256 "9fb71f92f936c54697e9b9ff09f0c1deea79f55add982f38328ba4f53dc22867"
+    if Hardware::CPU.intel?
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.2/gpc_0.3.2_Darwin_x86_64.tar.gz"
+      sha256 "65dd92dab7116bd1963d428e3846f34502e589c751be8fa603d068897d528155"
 
       def install
         bin.install "gpc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.3.1/gpc_0.3.1_Darwin_x86_64.tar.gz"
-      sha256 "a7ecc4f2d30ca49eee69625b1348a0ebd55e55067cf29304fbf4f1d9ce99f03f"
+    if Hardware::CPU.arm?
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.2/gpc_0.3.2_Darwin_arm64.tar.gz"
+      sha256 "9d69fa912f8e3be6e0c65d316f954d8ae821bc1149ddc2e15055ed8a46bd6adc"
 
       def install
         bin.install "gpc"
@@ -27,17 +27,17 @@ class Gpc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.3.1/gpc_0.3.1_Linux_arm64.tar.gz"
-      sha256 "25ba0a9aa916b9a71a4ac000573c2196c111dbb5c5248069ecef31301d6c4bf1"
+    if Hardware::CPU.intel?
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.2/gpc_0.3.2_Linux_x86_64.tar.gz"
+      sha256 "1f8d1d6ba11bb9d86ad3c1c9fd948d0f0f8148722eb7acaa3914e06bb47f2ba4"
 
       def install
         bin.install "gpc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fchimpan/gpc/releases/download/v0.3.1/gpc_0.3.1_Linux_x86_64.tar.gz"
-      sha256 "26c4dbd6b8c26803b859411e72f84db0f965d0f5ed1a2a7668017c4df1250eec"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fchimpan/gpc/releases/download/v0.3.2/gpc_0.3.2_Linux_arm64.tar.gz"
+      sha256 "cfa402c0de8419a104499b42b0ef9c796121d4cbccdfc971519f67045ca11f7e"
 
       def install
         bin.install "gpc"
